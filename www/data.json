@@ -1,0 +1,29 @@
+{
+    "exhibitions": [
+      {
+        "title": "Van Gogh at Kröller-Müller",
+        "year": "2023",
+        "description": "Μόνιμη συλλογή",
+        "works": "90 πίνακες"
+      },
+      {
+        "title": "Early Works",
+        "year": "2022",
+        "description": "Πρώιμα έργα του καλλιτέχνη",
+        "works": "25 πίνακες"
+      }
+    ],
+    "links": [
+      {
+        "title": "Van Gogh Museum",
+        "url": "https://www.vangoghmuseum.nl/",
+        "description": "Επίσημη ιστοσελίδα του μουσείου Van Gogh"
+      },
+      {
+        "title": "Van Gogh Gallery",
+        "url": "https://www.vangoghgallery.com/",
+        "description": "Διαδικτυακή συλλογή έργων"
+      }
+    ]
+  }
+  

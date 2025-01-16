@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent van Gogh</title> <!--Τίτλος της ιστοσελιδας πανω πανω-->
+    <link rel="stylesheet" href="style.css"> <!--ποιο css χρησιμοποιεθ-->
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Vincent van Gogh</h1>
+        </header>
+
+        <nav>
+            <ul> <!--Εχουμε την λιστα με τους συνδεσμους εδω που θα εμφανιζει στο κεντρικο πανω κομματι της σελιδας,δυναμική πλοήγηση με το data-section-->
+                <li><a href="#" data-section="biography">Βιογραφία</a></li>
+                <li><a href="#" data-section="paintings">Πίνακες</a></li>
+                <li><a href="#" data-section="exhibitions">Εκθέσεις</a></li>
+                <li><a href="#" data-section="links1">Σύνδεσμοι</a></li>
+                <li><a href="#" data-section="admin">Διαχείριση</a></li>
+            </ul>
+        </nav>
+
+        <aside> <!--Eδω ειναι το πλαγιο μενου,οτι δεν ειναι ενεργο έχει την κλάση hidden-->
+            <div class="side-menu" id="biography-menu"> <!--στατικο-->
+                <h3>Βιογραφία</h3>
+                <ul>
+                    <li><a href="#" data-content="early-life">Πρώτα Χρόνια</a></li>
+                    <li><a href="#" data-content="career">Καριέρα</a></li>
+
+                </ul>
+            </div>
+
+            <div class="side-menu hidden" id="paintings-menu"> <!--στατικο-->
+                <h3>Πίνακες</h3>
+                <ul>
+                    <li><a href="#" data-content="portraits">Πορτραίτα</a></li>
+                    <li><a href="#" data-content="landscapes">Τοπία</a></li>
+                </ul>
+            </div>
+
+            <div class="side-menu hidden" id="exhibitions-menu"><!--δυναμικο -->
+                <h3>Εκθέσεις</h3>
+                <ul>
+                    <li><a href="#" data-type="exhibitions" data-category="Otterlo">Kröller-Müller Museum, Otterlo</a></li>
+                    <li><a href="#" data-type="exhibitions" data-category="Amsterdam">Van Gogh Museum, Amsterdam</a></li>
+                    <li><a href="#" data-type="exhibitions" data-category="London">National Gallery, London</a></li>
+                </ul>
+            </div>
+
+            <div class="side-menu hidden" id="links1-menu"><!--δυναμικο -->
+                <h3>Σύνδεσμοι</h3>
+                <ul>
+                    <li><a href="#" data-type="links1" data-category="websites">Διαδικτυακοί</a></li>
+                    <li><a href="#" data-type="links1" data-category="bibliography">Βιβλιογραφία</a></li>
+                    <li><a href="#" data-type="links1" data-category="museums">Μουσεία</a></li>
+                </ul>
+            </div>
+
+            <div class="side-menu" id="admin-menu"> <!-- Aυτο για το login-->
+
+
+                <h3>Επιλογές Διαχείρισης</h3>
+                <div id="login-section">
+                    <form id="login-form" class="admin-form">
+                        <h4>Σύνδεση Διαχειριστή</h4>
+                        
+                        <input type="text" name="username" placeholder="Όνομα χρήστη" required>
+                        <input type="password" name="password" placeholder="Κωδικός" required>
+                        <button type="submit">Σύνδεση</button>
+                        <label> <input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                    </form>
+                </div>
+                <div id="admin-options" class="hidden"><!--Aν ολα σωστα στην συνδεση θα εμφανιζει αυτο για τον διαχειριστη -->
+                    <ul>
+                        <li><a href="#" data-admin="exhibitions">Διαχείριση Εκθέσεων</a></li>
+                        <li><a href="#" data-admin="links">Διαχείριση Συνδέσμων</a></li>
+                        <li><a href="#" id="logout">Αποσύνδεση</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main> <!--Εδω ειναι περισσοτερες πληροφοριες που θα εμφανιστουν -->
+        <section id="biography" class="content-section">
+        <div id="early-life" class="biography-content">
+            <h2>Πρώτα Χρόνια</h2>
+            <p>Ο Vincent van Gogh ήταν ένας από τους πιο διάσημους ζωγράφους όλων των εποχών...</p>
+            <p>Γεννήθηκε στο ολλανδικό χωριό Ζούντερτ (Zundert) και ήταν ο μεγαλύτερος από τα συνολικά επτά παιδιά της οικογένειάς του, γιος του πάστορα Θεόδωρου βαν Γκογκ.</p>
+            <p>Στον Βίνσεντ δόθηκε το όνομα του παππού του, το οποίο είχε δοθεί και στο πρωτότοκο παιδί της οικογένειας, το οποίο είχε πεθάνει σε βρεφική ηλικία. Ήδη από τα πολύ νεανικά του χρόνια παρουσίασε τάσεις μελαγχολίας και πρώιμα ψυχολογικά προβλήματα.</p>
+            <p>Σε ηλικία 16 ετών και αφού είχε ήδη καταπιαστεί χωρίς επιτυχία με αρκετά επαγγέλματα, ασχολήθηκε για ένα διάστημα με το εμπόριο έργων τέχνης, στην εταιρεία Goupilator & Company, όπου τον επόμενο χρόνο προσελήφθη και ο αδελφός του Τεό βαν Γκογκ (Theo van Gogh).</p>
+            <p>Το 1873, η εταιρεία τον μεταθέτει στο Λονδίνο και αργότερα στο Παρίσι. Την περίοδο αυτή, εντείνεται το ενδιαφέρον του για τη θρησκεία, επηρεασμένος εμφανώς και από την ιδιότητα του πατέρα του. Αφού απολύεται από την εργασία του το 1876, επιστρέφει στο Άμστερνταμ για να σπουδάσει θεολογία. </p>
+            <p>Οι σπουδές του διαρκούν για περίπου ένα έτος και το 1878 του ανατίθεται μία θέση ιεροκήρυκα στο Βέλγιο και συγκεκριμένα στην υποβαθμισμένη περιοχή Μπορινάζ, όπου λειτουργεί ορυχείο. Ο Βαν Γκογκ κηρύττει για περίπου έξι μήνες επιδεικνύοντας ιδιαίτερο ενδιαφέρον για την ένδεια των ανθρώπων της περιοχής. Αυτή είναι και η περίοδος κατά την οποία ξεκινά να σχεδιάζει μικρά έργα και πιθανόν αποφασίζει να ασχοληθεί με την τέχνη.</p>
+        </div>
+
+        <div id="career" class="biography-content">
+            <h2>Καριέρα</h2>
+            <p>Το 1880, σε ηλικία 27 ετών, ξεκινά να παρακολουθεί τα πρώτα του μαθήματα ζωγραφικής, ωστόσο σύντομα έρχεται σε ρήξη με τον δάσκαλό του, Αντόν Μωβ (Anton Mauve), γύρω από καλλιτεχνικά ζητήματα.</p>
+            <p>Τα επόμενα χρόνια δημιουργεί έργα κυρίως επηρεασμένα από τη ζωγραφική του Ζαν Φρανσουά Μιγέ (Jean-François Millet), ενώ ταξιδεύει στην ολλανδική επαρχία ζωγραφίζοντας θέματα που εμπνέεται από αυτή.</p>
+            <p>Αρκετές από τις προσωπογραφίες του, περιλαμβάνουν επίσης σε δεύτερο πλάνο κάποιο έργο ιαπωνικής τέχνης.</p>
+            <p>το 1888, ο βαν Γκογκ εγκαταλείπει τη γαλλική πρωτεύουσα και επισκέπτεται τη νότια Γαλλία και την περιοχή της Προβηγκίας. Υπάρχουν αναφορές πως εκεί εμπνέεται από το τοπίο καθώς και την αγροτική ζωή των κατοίκων, θέματα τα οποία προσπαθεί να αποδώσει και στη ζωγραφική του. Την περίοδο αυτή, επινοεί και μία ιδιαίτερη τεχνική των στροβιλισμάτων με το πινέλο ενώ στους πίνακές του κυριαρχούν έντονα χρώματα, όπως κίτρινο, πράσινο και μπλε, με χαρακτηριστικά δείγματα τα έργα Έναστρη νύχτα και μία σειρά πινάκων που απεικονίζουν ηλιοτρόπια. Το έργο Κόκκινο αμπέλι αυτής της περιόδου είναι επίσης το μοναδικό έργο που κατάφερε να πουλήσει ο βαν Γκογκ εν ζωή. </p>
+        </div>
+        </section> 
+
+        <section id="paintings" class="content-section hidden">
+        <div id="portraits" class="paintings-content">
+            <h2>Πορτραίτα</h2>
+            <img src="/images/Gogh_Self-Portrait.jpg" width = "400" height = "400"/>
+            <img src="/images/vvg.jpg" width = "400" height = "400"/>
+        </div> 
+        <div id="landscapes" class="paintings-content">
+            <h2>Τοπία</h2>
+            <img src="/images/starry night.jpg" width = "400" height = "400"/>
+            <img src="/images/Landscapevvg.jpg" width = "400" height = "400"/>
+        </div>
+        
+        </section>
+
+        <section id="exhibitions" class="content-section hidden">
+            <div id="Otterlo" class="exhibitions-content">
+                <h2>Έκθεση στο Otterlo</h2>
+            </div>
+        </section>
+
+    <section id="links1" class="content-section hidden">
+        <div id="links1-menu" class="side-menu">
+            <a href="#" data-category="websites">Διαδικτυακοί Σύνδεσμοι</a>
+            <a href="#" data-category="bibliography">Βιβλιογραφία</a>
+        </div>
+        <div id="bibliography" class="links1-content">
+            <h2>Σύνδεσμοι</h2>
+            <p>Κάποιοι σνδεσμοι εδώ...</p>
+        </div>
+        <div id="museums" class="links1-content">
+            <h2>Μουσεία</h2>
+            <p>Κάποια μουσεία εδώ...</p>
+        </div>
+        </section>
+        </main>
+
+        <footer>
+            <p> Copyright © 2025 All rights reserved</p> 
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
